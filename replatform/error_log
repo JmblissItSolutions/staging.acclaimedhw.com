@@ -1,0 +1,40 @@
+[25-Aug-2021 07:21:35 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: exception in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php:73
+Stack trace:
+#0 /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php(73): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/replatfor...', 73, Array)
+#1 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(ErrorException))
+#2 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(ErrorException))
+#3 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(ErrorException))
+#4 {main}
+  thrown in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php on line 73
+[25-Aug-2021 07:22:23 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: exception in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php:73
+Stack trace:
+#0 /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php(73): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/replatfor...', 73, Array)
+#1 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(ErrorException))
+#2 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(ErrorException))
+#3 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(ErrorException))
+#4 {main}
+  thrown in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php on line 73
+[25-Aug-2021 07:25:03 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: exception in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php:73
+Stack trace:
+#0 /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php(73): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/replatfor...', 73, Array)
+#1 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(ErrorException))
+#2 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(ErrorException))
+#3 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(ErrorException))
+#4 {main}
+  thrown in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php on line 73
+[25-Aug-2021 07:25:07 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: exception in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php:73
+Stack trace:
+#0 /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php(73): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/replatfor...', 73, Array)
+#1 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(ErrorException))
+#2 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(ErrorException))
+#3 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(ErrorException))
+#4 {main}
+  thrown in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php on line 73
+[25-Aug-2021 07:27:51 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined variable: exception in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php:73
+Stack trace:
+#0 /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php(73): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/replatfor...', 73, Array)
+#1 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(119): App\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(ErrorException))
+#2 /home/replatformacclai/public_html/replatform/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(96): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(ErrorException))
+#3 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(ErrorException))
+#4 {main}
+  thrown in /home/replatformacclai/public_html/replatform/app/Exceptions/Handler.php on line 73

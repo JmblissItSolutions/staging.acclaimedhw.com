@@ -1,0 +1,4 @@
+Running scheduled command: App\Jobs\SendDailyOrderReport
+No scheduled commands are ready to run.
+testRunning scheduled command: App\Jobs\SendDailyOrderReport
+testRunning scheduled command: App\Jobs\SendDailyOrderReport
