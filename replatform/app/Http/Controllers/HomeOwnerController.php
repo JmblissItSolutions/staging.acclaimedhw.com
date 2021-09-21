@@ -319,6 +319,7 @@ class HomeOwnerController extends Controller
 						}
 					}
 					$orderinfo['productitems'] = $orderitems;
+					$receiver_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
 					// Send mail to admin
 					\Mail::send('emailtemplate/homeowner-invoice', array(
 						'order_id' => $requestdata->order_id,
@@ -344,7 +345,7 @@ class HomeOwnerController extends Controller
 						'phone' => $orderinfo['phone'],
 						'email' => $orderinfo['email'],
 						'discount' => $orderinfo['discount'],
-					), function($message) use ($payer_email){
+					), function($message) use ($payer_email,$receiver_emails){
 						$message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
 						$message->to($payer_email)->subject('Your Acclaimed Home Warranty order has been received!');
 					}); 

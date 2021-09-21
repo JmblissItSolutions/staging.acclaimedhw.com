@@ -22,7 +22,7 @@ class MakeAClaimController extends Controller
     {
         $rules = array(
 			'name' => 'required',
-			'phone' => 'required|numeric',
+			'phone' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
 			'email' => 'required|email',
 			'street_address' => 'required',
 			'city' => 'required',
@@ -110,7 +110,7 @@ class MakeAClaimController extends Controller
         $requestdata = (object)$request->json()->all();
         $rules = array(
             'contact_name' => 'required',
-            'contact_phone' => 'required|numeric',
+            'contact_phone' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'contact_email' => 'required|email',
             'contact_message' => 'required',
         );
@@ -170,7 +170,7 @@ class MakeAClaimController extends Controller
         $rules = array(
             'company_name' => 'required',
             'contact_name' => 'required',
-            'contact_number' => 'required|numeric',
+            'contact_number' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'contact_email' => 'required|email',
             'trade_services' => 'required',
             'service_areas' => 'required',
@@ -247,7 +247,7 @@ class MakeAClaimController extends Controller
             'last_name_1' => 'required',
             'state_1' => 'required',
             'email_1' => 'required|email',
-            'phone_number_1' => 'required',
+            'phone_number_1' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'information_1' => 'required',
             'location_name_1' => 'required'
         );
@@ -317,7 +317,7 @@ class MakeAClaimController extends Controller
             'last_name_2' => 'required',
             'state_2' => 'required',
             'email_2' => 'required|email',
-            'phone_number_2' => 'required',
+            'phone_number_2' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'information_2' => 'required',
             'location_name_2' => 'required'
         );
@@ -386,7 +386,7 @@ class MakeAClaimController extends Controller
             'last_name_3' => 'required',
             'state_3' => 'required',
             'email_3' => 'required|email',
-            'phone_number_3' => 'required',
+            'phone_number_3' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'information_3' => 'required',
             'location_name_3' => 'required'
         );
@@ -455,7 +455,7 @@ class MakeAClaimController extends Controller
             'last_name_4' => 'required',
             'state_4' => 'required',
             'email_4' => 'required|email',
-            'phone_number_4' => 'required',
+            'phone_number_4' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'information_4' => 'required',
             'location_name_4' => 'required'
         );
@@ -524,7 +524,7 @@ class MakeAClaimController extends Controller
             'last_name_5' => 'required',
             'state_5' => 'required',
             'email_5' => 'required|email',
-            'phone_number_5' => 'required',
+            'phone_number_5' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
             'information_5' => 'required',
             'location_name_5' => 'required'
         );
@@ -656,8 +656,8 @@ class MakeAClaimController extends Controller
             //'last_name' => 'required',
             'address_or_policy_number' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
-            'renewal_type' => 'required|integer',   // 1 For same 2 for other
+            'phone' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
+            'renewal_type' => 'required',   // 1 For same 2 for other
             
         );
         $validator = Validator::make($request->all(),$rules);
@@ -687,22 +687,36 @@ class MakeAClaimController extends Controller
            $renewal_type = $renewals['renewal_type'];
            $additional_details = $renewals['additional_details'];
            if ($saved) {
+               if($renewal_type == 'Yes'){
                 $mail_status = Mail::send('emailtemplate/renewals',
                     array(
-                        
                         'first_name'=>$first_name,
                         'last_name'=>$last_name,
                         'address_or_policy_number'=>$address_or_policy_number,
                         'email'=>$email,
                         'phone'=>$phone,
-                        'renewal_type'=>$renewal_type,
+                        //'renewal_type'=>$renewal_type,
                         'additional_details'=>$additional_details,
-                        
                      ),function($message) use ($receiver_emails){
                    
                     $message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
                     $message->to($receiver_emails)->subject('Thank You!');
-                }); 
+                });
+                } else { 
+                     $mail_status = Mail::send('emailtemplate/renewals1',
+                    array(
+                        'first_name'=>$first_name,
+                        'last_name'=>$last_name,
+                        'address_or_policy_number'=>$address_or_policy_number,
+                        'email'=>$email,
+                        'phone'=>$phone,
+                        'additional_details'=>$additional_details,
+                     ),function($message) use ($receiver_emails){
+                   
+                    $message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
+                    $message->to($receiver_emails)->subject('Thank You!');
+                });
+                } 
                 
             return response()->json([
                 "success" => true,

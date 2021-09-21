@@ -13,8 +13,8 @@
     <tr><th>Address : </th><td>{{$address_or_policy_number}}</td></tr>
     <tr><th>Email : </th><td>{{$email}}</td></tr>
     <tr><th>Phone : </th><td>{{$phone}}</td></tr>
-    <tr><th>Renewal Type : </th><td><p>I want to renew on the same plan & options as last year? =><strong>Yes</strong></p>
-                            <p>I want information on other renewal options & specials? =><strong>No</strong></p></td></tr>
+    <tr><th>Renewal Type : </th><td><p>I want information on other renewal options & specials? =><strong>Yes</strong></p>
+                            <p>I want to renew on the same plan & options as last year? =><strong>No</strong></p></td></tr>
     <tr><th>Additional Details : </th><td>{{$additional_details}}</td></tr>
 
 </table>

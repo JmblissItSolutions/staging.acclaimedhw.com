@@ -360,7 +360,7 @@ class RealStateOrderController extends Controller
             
             foreach($receiver_emails as $e){
                 $receiver_emails=$e;
-           
+           $admin_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
                 // Send mail to User
                 $pdf_stream=$this->create_invoice_pdf($order_id);
                 $inv_no = str_pad($order_id, 8, "0", STR_PAD_LEFT);
@@ -373,7 +373,7 @@ class RealStateOrderController extends Controller
                     'prop_state'=> $orderinfo['prop_state'],
                     'prop_zipcode'=> $orderinfo['prop_zipcode']
                     
-                 ), function($message) use ($receiver_emails,$order_id,$pdf_stream,$inv_no){
+                 ), function($message) use ($admin_emails,$receiver_emails,$order_id,$pdf_stream,$inv_no){
                     
                     $message->attachData($pdf_stream,'AHW'.$inv_no.'.pdf');
                    
