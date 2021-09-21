@@ -1,0 +1,102 @@
+/* top-image */
+.home_page.contact-pg {
+    width: 100%;
+}
+.top_img img{
+    height: 200px;
+    background-position: center top;
+    background-size: cover;
+}
+.contact-text{
+    padding: 36px 20px;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 300;
+    color: #333;
+}
+/* .inner */
+.inner.contact{
+    max-width: 1310px;
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.inner p{
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    top: 16px;
+}
+/* form */
+.contact_form label{
+    display: block;
+    color: #494d50;
+    font-size: 14px;
+}
+.contact_form input[type="text"],.contact_form input[type=number],.contact_form input[type=email]{
+    width: calc( 100% / 3 - 20.01px);
+    height: auto;
+    font-size: 14px;
+    outline: 0;
+    box-shadow: none;
+    margin-bottom: 23px;
+    padding: 6px 12px;
+    color: #494d50;
+    display: block;
+}
+textarea.contact-textarea {
+    height: 120px;
+    width:100% !important;
+    font-size: 14px;
+    outline: 0;
+    box-shadow: none;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    color: #494d50;
+}
+
+.contact-btn{
+    color: #555;
+    height: auto;
+    cursor: pointer;
+    background: 0 0;
+    box-shadow: none;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    margin-bottom: 22px;
+}
+.form-success{
+    width: 100%;
+    background-color: #4bce61;
+    padding: 1em 3em;
+    margin: 0 0 2em;
+    position: relative;
+    color: #fff;
+    border-radius: 5px;
+}
+p.contact-error-msg {
+    font-size: 16px;
+    color: red;
+}
+
+@media(max-width: 550px){
+    h1.contact-text {
+        font-size: 9.375vw;
+    }
+    section.inner.contact {
+        padding: 0 15px;
+    }
+    .contact_form input[type="text"], .contact_form input[type=number], .contact_form input[type=email] {
+        width: 100%;
+    }
+    .contact_form {
+        margin: 0px 0px;
+    }
+
+}

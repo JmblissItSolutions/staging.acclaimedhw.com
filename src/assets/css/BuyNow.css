@@ -1,0 +1,248 @@
+#upgrades_and_cart {
+    padding: 0 0 50px 0;
+}
+#upgrades_and_cart {
+    width: 100%;
+    color: #3A3A3A;
+}
+#upgrades_and_cart h2 {
+    padding-bottom: 0;
+    font-size: 36px;
+    text-align: center;
+    text-transform: inherit;
+}
+#upgrades_and_cart h2 strong {
+    color: #00A1B8;
+    line-height: 1.1;
+    font-size: 102%;
+}
+span.spacer {
+    margin: 0 5px;
+}
+
+#upgrades_and_cart .textured-back {
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: #3A3A3A;
+    background-attachment: fixed;
+}
+#upgrades_and_cart .textured-back h3 {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-size: 20px;
+}
+#upgrades_and_cart .textured-back h4 {
+    color: white;
+    margin: 0;
+}
+#upgrades_and_cart .upgrade_list {    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+#upgrades_and_cart .upgrade_cont .upgrade {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    max-width: calc(100% / 3);
+    min-width: 200px;
+    width: 100%;
+    flex: 1 1 33.33333%;
+}
+#upgrades_and_cart .upgrade_cont .upgrade input {
+    width: 32px;
+    text-align: center;
+    padding: 0 0 0 2px;
+    margin: 0;
+}
+#upgrades_and_cart .upgrade_cont .upgrade .price {
+    width: 40px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 2px;
+    border-right: 1px solid #00A1B8;
+    font-weight: bold;
+}
+#upgrades_and_cart .upgrade_cont .upgrade .name {
+    padding-left: 5px;
+}
+#upgrades_and_cart .bottom-cont {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+#upgrades_and_cart .bottom-cont .cart {
+    flex: 1;
+}
+#upgrades_and_cart .bottom-cont h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+#upgrades_and_cart .bottom-cont ul {
+    padding: 0;
+    margin-top: 0;
+    list-style-type: none;
+}
+#upgrades_and_cart .bottom-cont ul li {
+    min-height: 17px;
+}
+#upgrades_and_cart .bottom-cont .total {
+    padding-right: 10px;
+    font-size: 22px;
+    text-align: right;
+}
+#upgrades_and_cart .footy {
+    text-align: right;
+}
+#upgrades_and_cart .footy .btn {
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+#upgrades_and_cart .footy .btn.cancel {
+    background: #00A1B8;
+}
+.plan_interval{
+text-align: center;
+margin-top:20px
+}
+.plan_interval label {
+    font-size: 18px;
+}
+.plan_interval label span{
+    padding-left: 5px;
+}
+section#upgrades_and_cart .textured-back h4 {
+    font-size: 14px;
+}
+.total {
+    text-align: right;
+    margin: 15px 0 30px;
+    font-size: 22px;
+    text-align: right;
+    line-height: 1.1;
+    padding-right: 10px;
+}
+.total h4{
+    margin: 0;
+}
+.cart {
+    margin-top: 30px;
+}
+.buybtn {
+    background-color: #6FA553;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    color: white !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 16%);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    -webkit-transition: background-color 0.25s ease;
+    -ms-transition: background-color 0.25s ease;
+    -moz-transition: background-color 0.25s ease;
+    -o-transition: background-color 0.25s ease;
+    position: relative;
+}
+.buyinput {
+    background: transparent !important;
+    width: 100%;
+    margin: 0 !important;
+    color: white !important;
+    letter-spacing: 1px;
+    font-size: 14px !important;
+    border: none !important;
+    padding: 0 !important;
+ 
+}
+button.redirectcancel {
+    background: transparent;
+    border: none;
+}
+.hidefilter select {
+    background: gray;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.upgrade .quntity_box {
+    position: relative;
+    padding: 8px 30px 8px 8px;
+    border: 1px solid #a5a5a5;
+}
+.upgrade .name {
+    margin: 0;
+    margin-top: 0;
+}   
+.upgrade .quntity_box button.qua_btn {
+    position: absolute;
+    right: 0;
+    border: 0;
+    bottom: 0;
+    padding: 0 5px;
+    height: 50%;
+    width: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50%;
+    transition: all 500ms ease-in;
+}
+.upgrade .quntity_box button.qua_btn:hover {
+    background: #00A1B8;
+    color: #fff;
+}
+.upgrade .quntity_box button.qua_btn + button.qua_btn {
+    top: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+@media (max-width:991px){
+    #upgrades_and_cart .upgrade_cont .upgrade {
+        max-width: calc(100% / 2);
+        flex: 1 1 50%;
+    }
+}
+@media (max-width:767px){
+    div#plans {
+        padding-top: 30px;
+    }
+    #upgrades_and_cart .upgrade_cont .upgrade .price {
+        width: 50px;
+    }
+
+    
+}
+@media (max-width:580px){
+    #upgrades_and_cart .upgrade_cont .upgrade {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    #upgrades_and_cart h2 {
+        font-size: 26px;
+    }
+}

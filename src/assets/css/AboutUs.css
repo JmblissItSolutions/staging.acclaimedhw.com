@@ -1,0 +1,464 @@
+.home_page.about-pg {
+    width: 100%;
+}
+.about-ttl h1 {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 72px;
+    font-weight: 300;
+}
+.lattice-bg{
+    width: 100%;
+    background-color: #3A3A3A;
+    background-attachment: fixed;
+    margin: 0;
+    height: 20px;
+    border: none;
+}
+section.blueBack.about-us {
+    background-color: #00A1B8;
+    padding: 20px 0 100px 0;
+}
+.about-us .inner{
+    max-width: 1310px;
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 236px;
+}
+.about-us .whiteText{
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+}
+.about-us p {
+    font-size: 21px;
+    color: white;
+    text-align: center;
+}
+.leadership{
+    background: linear-gradient(180deg, #e8e8e8 0%, #fff 45%, #fff 100%);
+}
+.leadership h2{
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.leader-cont {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 10px;
+}
+.leader-cont .leader {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+    color: #747474;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.leader-cont .leader .img-cont {
+    border-radius: 100%;
+    width: 100%;
+    max-width: 188px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.leader-inner .img-cont img {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+.leader-cont .leader h4{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    color: #747474;
+}
+.leader-cont .leader p {
+    margin: 0;
+    top: 5px;
+    color: #747474;
+}
+p.tittle ,p.cell,p.office,p.email{
+    top: 0px;
+    color: #8b8b8b;
+}
+p.cell a,p.office a,p.email a {
+    color: #8b8b8b;
+}
+.google-review-feed h2{
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.google-review-feed .inner{
+    max-width: 1310px;
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.ti-widget{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    direction: ltr;
+    box-sizing: border-box;
+}
+.ti-widget-container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.ti-footer{
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+    line-height: 1.45em;
+}
+.ti-large-logo{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-bottom: 0px;
+}
+.ti-v-center{
+    align-self: center;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.ti-large-logo .ti-v-center img {
+    margin: auto;
+    padding: 0px;
+    display: block;
+    position: relative;
+    width: 110px;
+}
+ .ti-footer .ti-stars {
+    margin-bottom: 3px;
+    margin-top: 0px;
+    white-space: nowrap;
+}
+.star-lg .rating-cont{
+    position: relative;
+    margin: 0 !important;
+    display: inline-flex;
+    align-items: center;
+}
+.ti-rating-text strong.ti-rating {
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+    color: #000000;
+}
+.nowrap:last-of-type {
+    margin-right: 0;
+    color: #000000;
+}
+.ti-reviews-container{
+    flex: 0 0 75%;
+    max-width: 75%;
+    position: relative;
+}
+.ti-review-item{
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    padding: 0 8px;
+}
+ .ti-review-item>.ti-inner {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    background-color: #efefef;
+    border-style: solid;
+    border-color: #efefef;
+    background: #efefef;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 0px;
+    display: block;
+}
+.ti-review-header{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.ti-profile-details {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.ti-widget-container .ti-name {
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 15px;
+    overflow: hidden;
+    padding-right: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    margin-bottom: 2px;
+}
+.ti-profile-img img {
+    width: 40px;
+    margin: 0 15px 0 0;
+    height: 40px;
+    padding: 0px;
+    display: block;
+    border-radius: 30px;
+    min-width: initial;
+    max-width: initial;
+    object-fit: cover;
+    object-position: top;
+}
+.ti-logo img{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    top: 8px;
+}
+.ti-review-content{
+    height: 81.2px;
+    line-height: 20.3px;
+    font-size: 14px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+.about-crousel-item {
+    display: flex !important;
+}
+
+.giving-back{
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, #e8e8e8 0%, #fff 45%, #fff 100%);
+}
+.giving-back h2.upper {
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+    padding: 0.63em 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.giving-back .inner {
+    max-width: 915px;
+}
+.giving-back p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    max-width: 700px;
+    top: 0px;
+}
+.organizations{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-cont{
+    margin-bottom: 40px;
+    flex: 1;
+    padding: 15px;
+}
+.instagram-feed{
+    background-color: #212121;
+    padding-bottom: 80px;
+}
+.instagram-feed h2.upper {
+    color: #fff;
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+    text-transform: uppercase;
+}
+.instagram-feed .inner{
+    max-width: 1310px;
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.sb_instagram{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.sb_instagram .sbi_images {
+    width: 100%;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.sbi_images .sbi_item {
+    width: 25%;
+}
+.sb_instagram .sbi_images .sbi_item {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    max-height: 1000px;
+    padding: inherit;
+    margin: 0;
+    text-decoration: none;
+    opacity: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.sbi_photo_wrap{
+    position: relative;
+}
+.sbi_photo{
+    display: block;
+    text-decoration: none;
+}
+.sbi_photo img{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    height: 282.5px;
+    object-fit: cover;
+}
+.sb_instagram .sbi_load {
+    float: left;
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+.sb_instagram .sbi_follow_btn {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    text-align: center;
+}
+
+.sb_instagram .sbi_load .sbi_load_btn, .sb_instagram .sbi_follow_btn a {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    padding: 7px 14px;
+    margin: 5px auto 0 auto;
+    background: #408bd1;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.sbi_load .sbi_follow_btn img{
+    margin-bottom: 0px;
+    margin-right: 7px;
+    font-size: 15px;  
+    height: 1em;
+    display: inline-block;
+}
+.ant-carousel .slick-dots li button{
+    display: none !important;
+} 
+@media only screen and (max-width:767px){
+    .about-us .inner {
+        padding: 10px 15px;
+    }
+    .about-ttl h1{
+        font-size: 28px;
+    } 
+    .leader-cont .leader {
+        display: block;
+    }
+    .organizations {
+	    text-align: center;
+	    flex-wrap: wrap;
+        display: flex;
+	}
+    .organizations .img-cont {
+        flex: none;
+        width: 50%;
+    }
+	.sbi_item.sbi_type_image {
+	    width: 50%;
+	    flex: unset;
+	}
+	.sbi_photo img {
+	    background-size: cover;
+	    background-position: 50%;
+	    background-repeat: no-repeat;
+	    opacity: 1;
+	    height: auto;
+	    object-fit: cover;
+	}
+    .organizations .img-cont img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .ti-widget-container{
+        display: block;
+        margin-top: 15px;
+    }
+   .ti-footer {
+   flex: 0px;
+   max-width: 100%;
+  }
+.ti-review-item.source-Google {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 20px;
+   }
+   .google-review-feed h2 {
+       padding: 0px 0px;
+   }
+   .leader-cont {
+       padding: 0px 0px;
+   }
+   .about-us .whiteText {
+       padding: 0px;
+   }
+   .leader .leader-inner {
+    margin-bottom: 44px;
+}
+.giving-back {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width:414px){
+    .ti-review-item {
+        padding: 0 12px;
+    }
+}

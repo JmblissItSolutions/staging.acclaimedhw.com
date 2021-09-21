@@ -1,0 +1,435 @@
+/* radio button design start  */
+.radiodesign {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radiodesign input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .square .checkmark{
+    background-color: rgb(194 191 191);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radiodesign:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radiodesign input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radiodesign input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radiodesign .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+  }
+/* radio button design end  */
+
+.realstate h1{
+    padding: 45px 20px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 300;
+}
+.homplan,.coverage,.answering,.blank_box,.listing_seller,.border-container,
+.assitance,.Condominium,.baseprice,.constcall{
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #00a1b8;
+}
+.orders{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+.order_flex:first-child{
+    max-width: 165px;
+}
+.order_flex:last-child{
+    max-width: 132px;
+    margin-right: 0;
+    margin-left: auto;
+}
+.order_flex{
+    width: 100%;
+    margin-right: 20px;
+}
+.order_col,.warantyorder{
+    display: block;
+    margin-bottom: 5px;
+}
+.order_sel{
+    display: block;
+    width: 149px;
+    height: 31px;
+    margin-left: 10px;
+}
+.square{
+    background-color: #efefef;
+    padding: 10px;
+}
+.square h4{
+        font-size: 18px;
+        font-weight: 300;
+}
+.bestplan{
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #00a1b8;
+    display: flex;
+}
+.plan_system{
+    max-width: 322px;
+}
+.select{
+    display: block;
+    width: 80px !important;
+    margin: 0px 6px ;
+}
+.planside{
+    display: flex;
+    margin-left: 34px;
+}
+.click_here{
+    width: 100%;
+    max-width: 250px;
+    margin-left: 21px;
+}
+em {
+    font-size: 16px;
+    font-style: italic;
+    display: block;
+    margin-top: 9px;
+}
+strong.greentxt {
+    color: #6FA553;
+    font-size: 16px;
+}
+strong.bluetxt {
+    color: #00A1B8;
+    font-size: 16px;
+}
+.baseprice_plan{
+    width: 40%;
+    text-align: left;
+}
+.baseprice_amnt{
+    float: left;
+    width: 11%;
+    margin-left: 60px;
+}
+.base_price_plan{
+    display: flex;
+}
+.warranty_order span{
+    display: block;
+    margin-bottom: 10px;
+}
+/* Application Information */
+.app_form h2{
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.appForm__child{
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #00a1b8;
+}
+.appForm__child h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.appForm__flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.appForm__field.two-thirds {
+    width: calc(100% / 3 * 2 - 20px);
+}
+.appForm__field {
+    width: calc(100% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.appForm__child input, .appForm__child select {
+    border: 1px solid #969696;
+    height: 45px;
+    width: 100%;
+    padding: 10px 15px;
+    color: #575757;
+    font-size: 14px;
+    margin-bottom: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+    border-radius: 0;
+}
+.appForm__field.third {
+    width: calc(100% / 3 - 20px);
+}
+.appForm__flex label {
+    display: none !important;
+}
+.appForm__flex .has-checkbox {
+    position: relative;
+}
+.appForm__flex .has-checkbox label {
+    color: #575757;
+    display: inline !important;
+    position: absolute;
+    top: 12px;
+}
+.appForm__flex .has-checkbox input[type="checkbox"] {
+    width: 20px;
+    margin-right: 5px;
+}
+.appForm__field.half {
+    width: calc(100% / 2 - 20px);
+}
+.appForm__child label{
+    position: relative;
+}
+.appForm__child label input[type="radio"] {
+    width: 15px;
+    position: relative;
+    top: 17px;
+    left: -8px;
+}
+.appForm__child textarea{
+    width: 100%;
+}
+.showbtn div {
+    cursor: pointer;
+}
+.showbtn span {
+    z-index: -1;
+    position: relative;
+}
+h4.order_ttl {
+    font-size: 22px;
+}
+
+.table-cont-2.new-table-dsn > div {
+    flex-direction: column;
+    text-align: left;
+}
+.in-box {
+    text-align: left;
+    justify-content: left;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    margin: 20px auto;
+}
+/* ConfirmOrder */
+.confirmBox{
+    position: relative;
+    bottom: 70px;
+}
+.confirmBox h2{
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+}
+.confirmBox .cwell{
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #00a1b8;
+}
+.crow.n1 h4{
+    color: #3a3a3a;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    line-height: 2.4;
+}
+.ccol.n1 h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 2.4;
+}
+.ccol.n1 p {
+    font-size: 16px;
+}
+.crow.n2 h4 {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+#orderList thead tr{
+    vertical-align: top;
+    background-color: #efefef;
+}
+#orderList thead th {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+td.ng-binding {
+    font-size: 16px;
+}
+.ccol.n1 p span,.ccol.n2 p span {
+    display: block;
+    margin-bottom: 10px;
+}
+.ccol.n2 li.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    line-height: 2;
+    font-size: 16px;
+}
+.ng-scope strong {
+    font-size: 16px;
+}
+.thankyou h2{
+    font-size: 42px;
+    margin: 0;
+    padding: 0.83em 0;
+}
+.thankyou h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.thankyou p {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+.thankyou a {
+    color: #6FA553;
+    font-size: 16px;
+}
+ .thankyou .cwell{
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #00a1b8;
+}
+.greenBtn{
+    color: #6FA553;
+}
+.greenBtn:hover{
+    color: #6FA553;
+}
+.ccol.n2 h4 {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+}
+.coverage_upgrades input[type='number'] {
+    appearance: textfield;
+  }
+  .coverage_upgrades input[type='number']::-webkit-inner-spin-button,
+  .coverage_upgrades input[type='number']::-webkit-outer-spin-button,
+  .coverage_upgrades input[type='number']:hover::-webkit-inner-spin-button, 
+  .coverage_upgrades input[type='number']:hover {
+  -webkit-appearance: none; 
+   margin: 0; }
+.blink_me {
+    animation: blinker 2s linear infinite;
+  font-size: 20px;
+  display: inline;
+  color: #fff;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+.listing_seller label {
+    margin: 7px 0;
+    cursor: pointer;
+}
+.listing_seller input[type="checkbox"] {
+    margin: 0 10px 0 0;
+}
+.constcall button.btn {
+    margin-top: 20px;
+}
+@media (max-width:767px){
+    .appForm__flex {
+        display: block;
+    }
+     .appForm__field .two-thirds {
+        width: 100%;
+    }
+    .appForm__field{
+        width: 100%;
+    }
+    .appForm__field.third {
+        width: 100%;
+    }
+    .appForm__field.half {
+        width: 100%;
+    }
+    .listing_seller label input {
+        margin-right: 10px;
+    }
+    .appForm__field.two-thirds {
+        width: 100%;
+    }
+    .confirmBox h2 {
+        font-size: 24px;
+    }
+    .order_sel {
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    .click_here {
+        margin-left: 0px;
+    }
+    .hidenav {
+        display: none;
+    }
+    
+}

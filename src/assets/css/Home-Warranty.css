@@ -1,0 +1,219 @@
+.home-warranty{
+    width: 100%;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/* top-image */
+.home-warranty .top_img img{
+    height: 200px;
+    background-position: center top;
+    background-size: cover;
+}
+/* first_sec */
+.first_sec{
+    padding: 53px 0 40px;
+}
+.first_sec h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.first_sec h2{
+    padding: 12px;
+    font-size: 33px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.first_sec p{
+    font-size: 17px;
+    line-height: 29px;
+    text-align: center;
+    color: #333;
+}
+/* home_wranty */
+.home_page .home-warranty .home_wranty{
+    text-align: justify;
+    padding: 0px 50px;
+    box-shadow: 0px 0px 14px -1px;
+    margin: 1%;
+    min-height: 480px;
+    display: table;
+}
+.home_wranty {
+    text-align: justify;
+    padding: 0 50px;
+    box-shadow: 0 0 2px #c1c0c0;
+    margin: 1%;
+    display: table;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #d8d6d6;
+}
+
+.home_wranty .inner_homewranty {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.inner_homewranty h3{
+    color: #00a1b8;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: capitalize
+}
+.inner_homewranty p{
+    font-size: 15px;
+    color: #3A3A3A;
+}
+.inner_homewranty li{
+    font-size: 14px;
+    font-weight: 700;
+    color: #727070;
+    line-height: 22px;
+}
+/* acclaimed_apart */
+.acclaimed_apart {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background: linear-gradient(
+180deg
+, #e8e8e8 0%, #fff 45%, #fff 100%);
+}
+.acclaimed_apart h1{
+    font-weight: normal;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    padding: 80px 0 20px 0;
+    color: #3A3A3A;
+    font-size: 48px;
+}
+.acclaimed_apart p{
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 17px;
+}
+.acclaimed_reason{
+    display: block;
+    float: none;
+    width: 50%;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.acclaimed_reason h4{
+    font-size: 20px;
+    color: #2e4a58;
+    opacity: 1;
+    font-weight: 700;
+    margin: 16px 0 10px;
+}
+.acclaimed_inner_reason{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1310px;
+    padding: 38px 0px 0px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.acclaimed_reason .achis img{
+    margin: auto;
+    display: block;
+    width: 100px;
+}
+.acclaimed_reason p {
+    font-size: 15px;
+}
+/* contact-us */
+.contact_us{
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(180deg, #e8e8e8 0%, #fff 45%, #fff 100%);
+    margin-top: 4%;
+    margin-bottom: 7%;
+}
+.contact_us h3{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.contact_us p{
+    width: 67%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 29px;
+    color: #333;
+}
+@media (max-width: 980px){
+    .acclaimed_inner_reason {
+        display: flex;
+        padding: 38px 0px 0px;
+    }
+    .acclaimed_reason {
+        width: 33.3%;
+        padding: 0px 12px;
+    }
+}
+@media (max-width: 550px){
+ .home-warranty .top_img img {
+    width: 100%;
+    height: 200px;
+    }
+    .first_sec h1{
+        font-size: 25px !important;
+        padding: 0px 6px;
+    }
+    .first_sec h2{
+        font-size: 20px !important;  
+    }
+    .row{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .row .col-md-6 {
+        margin-bottom: 10px;
+    }
+    .acclaimed_apart h1{
+        font-size: 20px;
+        padding: 30px 0 20px 0;
+    }
+    .acclaimed_apart p{
+        font-size: 16px;
+    } 
+    .acclaimed_reason {
+        width: 100%;
+    }
+    .contact_us{
+        padding: 15px 15px !important;
+    }
+    .contact_us p{
+        width: 100% !important;
+        font-size: 15px !important;
+    }
+    .home_wranty .inner_homewranty h3{
+        text-align: center;
+        font-size: 22px;
+    }
+    .home_page.home-warranty .home_wranty {
+        padding: 0px 15px;
+    }
+    .home-warranty .first_sec {
+        padding: 32px 0 40px;
+    }
+    .inner_homewranty {
+        padding: 20px 0px;
+    }
+    .acclaimed_inner_reason {
+        display: block;
+    }
+}

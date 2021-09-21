@@ -1,0 +1,383 @@
+.home-page.order-pg {
+    width: 100%;
+}
+#home-perfect-plan{
+    background-color: #3A3A3A;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 30px 0;
+}
+#home-perfect-plan .plans {
+    background-position: center center;
+    background-size: auto 100%;
+    background-color: #0F0707;
+}
+#home-perfect-plan .inner {
+    display: flex;
+    align-items: center;
+}
+#home-perfect-plan [class*="col-"] {
+    margin: 0 2px;
+    flex: 1 1 20%;
+    max-width: 20%;
+}
+.col-3 {
+    display: inline-block;
+    width: calc( 100% / 3 - 20.01px);
+}
+#home-perfect-plan .col-2, #home-perfect-plan .col-3, #home-perfect-plan .col-4 {
+    background-color: #0F0707;
+    height: 522px;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    transition: all .3s ease;
+}
+#home-perfect-plan .col-2:hover:before, #home-perfect-plan .col-3:hover:before, #home-perfect-plan .col-4:hover:before {
+    opacity: 0;
+}
+#home-perfect-plan .col-2:before, #home-perfect-plan .col-3:before, #home-perfect-plan .col-4:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    transition: all .3s ease;
+}
+#home-perfect-plan .col-2 .perfect-cta, #home-perfect-plan .col-3 .perfect-cta, #home-perfect-plan .col-4 .perfect-cta {
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    font-family: inherit;
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    line-height: 1em;
+    width: 100%;
+    transform: translateX(-50%);
+}
+#home-perfect-plan .col-2 .perfect-cta p, #home-perfect-plan .col-3 .perfect-cta p, #home-perfect-plan .col-4 .perfect-cta p{
+    text-transform: uppercase;
+}
+#home-perfect-plan .col-2 .perfect-cta__compare, #home-perfect-plan .col-3 .perfect-cta__compare, #home-perfect-plan .col-4 .perfect-cta__compare {
+    display: block;
+    font-size: 35px;
+    line-height: 1em;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#home-perfect-plan .col-3 .perfect-cta__state, #home-perfect-plan .col-3 .perfect-cta__plans, #home-perfect-plan .col-4 .perfect-cta__state, #home-perfect-plan .col-4 .perfect-cta__plans {
+    display: block;
+}
+#home-perfect-plan .col-2 .btn-cont, 
+#home-perfect-plan .col-3 .btn-cont, 
+#home-perfect-plan .col-4 .btn-cont {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+}
+#home-perfect-plan  .btn-cont .btn{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 10px;
+    padding: 10px 5px;
+    display: block;
+    white-space: normal;
+    background-color: #6FA553;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+#home-perfect-plan  .btn-cont .btn:hover{
+    color: white;
+    background-color: #64944a;
+}
+span.cho_loc {
+    color: #fff;
+    font-size: 36px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+.col-2 {
+    display: inline-block;
+    width: calc( 100% / 2 - 20.01px);
+}
+.col-4 {
+    display: inline-block;
+    width: calc( 100% / 4 - 20.01px);
+}
+.perfect-cta span {
+    display: block;
+}
+
+/* video pop up */
+.home_advantage section.video-sec.claimPage {
+    margin-top: 40px;
+}
+.home_advantage section.video-sec.claimPage  .container{
+    position: relative;
+    z-index: 55;;
+}
+.home_advantage section.video-sec.claimPage  h1 {
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.home_advantage section.video-sec.claimPage .img-pop {
+    position: relative;
+}   
+.mobile-slide{
+    display: none;
+}
+.mobile-slide .carousel-item{
+    text-align: center;
+    padding: 15px;
+}
+.mobile-slide .carousel-item .achi img,
+.mobile-slide  .achis img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.bottom-boxes {
+    padding: 24px 0px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1199px){
+    .banner .inner-bnr.container{
+        display: none;
+    }
+}
+@media only screen and (max-width: 991px){
+    body h1 {
+        font-size: 40px;
+    }
+    .home h3 {
+        font-size: 28px;
+    }   
+    .banner .inner-bnr.container {
+        display: block;
+        position: relative;
+        z-index: 55;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0;
+        bottom: 0;
+    }
+    .info-box {
+        position: static;
+        top: auto;
+        right: 0;
+        background: rgba(255,255,255,0.8);
+        box-shadow: -4px 4px 6px rgb(0 0 0 / 16%);
+        padding: 40px 0 50px;
+        max-width: 100%;
+        text-align: center;
+        bottom: 0;
+    }
+    .info-box .btn-cont {
+        padding: 0 0;
+        display: flex;
+        max-width: 594px;
+        margin: auto;
+    }
+    .info-box .btn-cont a{
+        margin: 2px;
+    }
+    .banner .carousel-item .w-100 {
+        height: auto;
+        min-height: 250px;
+    }
+    .banner .carousel-caption {
+        left: auto;
+    }
+    .banner .carousel-caption h1, .banner .carousel-caption h3 {
+        font-size: 40px;
+    }    
+    .banner .carousel-caption h1, .banner .carousel-caption h3 {
+        font-size: 30px;
+    }
+    #home-perfect-plan .inner {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    #home-perfect-plan [class*="col-"]{
+        max-width: 19%;
+    }
+    #home-perfect-plan [class*="col-"].col-4, #home-perfect-plan [class*="col-"].col-2.idaho_img {
+        flex: 1 1 49%;
+        max-width: 49%;
+        margin-top: 2%;
+    }
+    #home-perfect-plan .col-2 .perfect-cta, 
+    #home-perfect-plan .col-3 .perfect-cta, 
+    #home-perfect-plan .col-4 .perfect-cta {
+        font-size: 40px;
+    }    
+    #home-perfect-plan .col-2, #home-perfect-plan .col-3, #home-perfect-plan .col-4 {
+        height: 400px;
+    }
+    #home-perfect-plan .col-2 .btn-cont, 
+    #home-perfect-plan .col-3 .btn-cont,
+    #home-perfect-plan .col-4 .btn-cont{
+        padding: 0 15px;
+    }
+    #home-perfect-plan .perfect-cta {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+    #home-perfect-plan [class*="col-"].col-4 .perfect-cta span ,
+    #home-perfect-plan [class*="col-"].col-2.idaho_img .perfect-cta span{
+        display: inline;
+        padding: 0 5px;
+    }
+    #home-perfect-plan [class*="col-"].col-4 .perfect-cta .perfect-cta__compare,
+    #home-perfect-plan [class*="col-"].col-2.idaho_img .perfect-cta .perfect-cta__compare{
+        display: block;
+    }
+    .reason {
+        text-align: center;
+        padding: 0 5px;
+        margin-bottom: 15px;
+        flex: 1 1 49%;
+        padding: 30px 15px;
+    }
+    .order-pg .flex-container .box {
+        height: auto;
+    }
+}
+/* @media (max-width: 991px) and (min-width: 768px){
+    #home-perfect-plan .inner {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: unset;
+        padding: 0 15px;
+        overflow-x: auto;
+        flex-wrap: unset;
+    }
+    #home-perfect-plan .col-3{
+        min-width: 270px
+    }
+}  */
+@media only screen and (max-width:767px){
+     .order-pg .bottom-boxes {
+        padding: 7px 14px;
+        width: 100%;
+    }
+    .order-pg .box h4 {
+        padding: 15px 2px;
+        font-size: 15px;
+    }
+    body h1,
+    .home_advantage h1 {
+        font-size: 32px;
+      }
+      .home h3 {
+        font-size: 25px;
+    }
+    .reason{
+        flex: 1 1 100%;
+        padding: 30px 15px 0;
+    }
+   
+    .banner .carousel-caption h1, 
+    .banner .carousel-caption h3 {
+        font-size: 24px;
+    }
+    .banner .carousel-item .w-100 {
+        height: auto;
+        min-height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .info-box .btn-cont {
+        padding: 0 0;
+        max-width: 275px;
+        flex-direction: column;
+    }
+    .info-box{
+        padding: 30px 15px;
+    }
+    .inner_reason{
+        padding: 40px 10px;
+    }
+    .advantage_reason {
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+    #home-perfect-plan [class*="col-"] ,
+    #home-perfect-plan [class*="col-"].col-4, 
+    #home-perfect-plan [class*="col-"].col-2.idaho_img{
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 234px !important;
+    margin: 0 0 5px 0;
+    }
+    .contact_con {
+        padding: 20px 0;
+    }
+    .contact_con p {
+        width: 100%;
+    }  
+    .home_wrranty h1 ,
+    .home_advantage h1{
+        padding: 20px 0 20px 0;
+    } 
+    .mobile-slide{
+        display: block;
+        margin-top: 20px;
+    }
+    .inner_reason , .home_wrranty .inner_slider{
+        display: none;
+    }
+    .topBar a.login{
+        font-size: 10px;
+    }
+    #home-perfect-plan{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 550px){
+#home-perfect-plan .perfect-cta span:first-child {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#home-perfect-plan .col-3 .perfect-cta__state, #home-perfect-plan .col-3 .perfect-cta__plans, #home-perfect-plan .col-4 .perfect-cta__state, #home-perfect-plan .col-4 .perfect-cta__plans {
+    display: inline-block !important;
+    padding: 7px;
+}
+.perfect-cta, span.perfect-cta__state ,span.perfect-cta__plans{
+    font-size: 25px;
+    clear: both;
+    white-space: nowrap;
+}
+}

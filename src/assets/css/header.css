@@ -1,0 +1,350 @@
+
+header{
+    width: 100%;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 20%);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: white;
+}
+header .container{
+    position: relative;
+}
+header .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a.navbar-brand img {
+    max-height: 50px;
+}
+/*top menu*/
+
+.top-menu {
+    position: absolute;
+    right: 15px;
+    z-index: 55;
+}
+.topBar img {
+    max-height: 20px;
+    max-width: 25px;
+    object-fit: contain;
+    display: inline-block;
+}
+.topBar a {
+    padding: 4px 10px;
+    display: inline-block;
+}
+.topBar a.icon-link{
+    padding-left: 30px;
+    position: relative;
+    color: #6FA553; 
+}
+.topBar a.icon-link img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.topBar a.login {
+    background-color: #A4BA98;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.25s ease;
+    -webkit-transition: background-color 0.25s ease;
+    -ms-transition: background-color 0.25s ease;
+    -moz-transition: background-color 0.25s ease;
+    -o-transition: background-color 0.25s ease;
+    display: block;
+    cursor: pointer;
+}
+.topBar a.login:hover{
+    background-color: #6FA553;
+    color: #fff;
+}
+/*end of top menu*/
+
+/*navigation*/
+nav.navbar {
+    width: 100%;
+    padding: 10px 0 0;
+}
+.mr-auto.navbar-nav {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+.logo-box {
+    padding: 10px 0;
+}
+a.navbar-brand img {
+    min-width: 280px;
+    max-height: 49px;
+}
+header.staticHeader {
+    position: relative;
+}
+header.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+div#navbarNav {
+    flex-grow: unset;
+}
+.navbar-light .navbar-nav a.nav-link {
+    color: #6F6F6F;
+    font-size: 12px;
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 4px 4px 12px !important;
+}
+.navbar-light .navbar-nav a.nav-link:after{
+    content: '';
+    display: block;
+    background-color: #00A1B8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+}
+.navbar-light .navbar-nav a.nav-link:hover:after,
+.navbar-light .navbar-nav a.nav-link.active:after{
+    height: 8px
+}
+a.login_mobile_btn , a.contact_mobile_btn,.nav_facebook,.nav_insta{
+    display: none;
+}
+/*mobile menu*/
+@media (max-width: 1199px){
+    nav.navbar {
+        width: 100%;
+        padding: 15px 0;
+            position: static;
+    }
+    .mr-auto.navbar-nav {
+        margin-top: 0;
+    }
+    .top-menu {
+        position: absolute;
+        right: 96px;
+        z-index: 55;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .top-menu ul{
+        padding: 0;
+        margin: 0;
+    }
+    div#responsive-navbar-nav {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        padding: 20px 40px;
+        left: 0;
+        z-index: 55;
+        background: #00A1B8;
+        text-align: center;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    div#responsive-navbar-nav ul li{
+        display: block;
+        text-align: center;
+        padding: 5px;
+    } 
+    
+    div#responsive-navbar-nav ul li a, 
+    .navbar-light .navbar-nav a.nav-link,
+    .navbar-light .navbar-nav a.nav-link.active{
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 767px){
+    .hidenav {
+        display: none;
+    }
+    a.navbar-brand img {
+        min-width: 200px;
+        max-height: 40px;
+    }
+    .topBar a.icon-link{
+        font-size: 0;
+    }
+    div#responsive-navbar-nav ul li a, 
+    .navbar-light .navbar-nav a.nav-link,
+    .navbar-light .navbar-nav a.nav-link.active{
+        font-size: 16px;
+    }
+    a.login_mobile_btn {
+        display: block;
+        background: #A4BA98;
+        max-width: 200px;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 15px 71px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+    a.contact_mobile_btn {
+        display: block;
+        max-width: 200px;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 14px 48px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+        background: #212121;
+        color: #00A1B8;
+        margin-top: 10px;
+    }
+    .social-icons{
+        display: flex;
+        justify-content: center;
+      }
+      a.login_mobile_btn , a.contact_mobile_btn,.nav_facebook,.nav_insta{
+          display: block;
+      }
+      a.nav_facebook,a.nav_insta {
+          font-size: 40px;
+          margin: 8px 10px;
+          text-align: center;
+          color: white;
+      }
+}
+@media (max-width: 380px){
+   .staticHeader .navbar-toggler-icon ,.fixedHeader .navbar-toggler-icon{
+    width: 20px;
+    }
+    .top-menu {
+       right: 67px !important;
+    }
+    .staticHeader .navbar-toggler,.fixedHeader .navbar-toggler{
+        padding: 0px 8px;
+    }
+}
+@media (max-width: 580px){
+    a.navbar-brand img {
+        min-width: 100px;
+        max-height: 25px;
+    }
+    .top-menu {
+     position: absolute;
+    right: 78px;
+    z-index: 55;
+    }
+    .topBar a.icon-link {
+    padding-left: 19px;
+    font-size: 0;
+    display: block;
+    vertical-align: middle;
+    margin-top: 6px;
+    }
+    .topBar > li {
+        margin-left: 5px;
+    }
+}
+
+/* login modal box */
+.model_foo button{
+    background-color: #6FA553;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: none;
+    float: right;
+    cursor: pointer;
+    margin: 12px 16px;
+}
+.model_foo button:hover{
+    background-color: #6FA553;
+}
+.mode_ttl{
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.42857143;
+    padding: 0px;
+    text-transform: capitalize;
+}
+.button-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.holderbtn{
+    background-color: #6FA553;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 16%);
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.holderbtn:hover{
+    background-color: #6FA553;
+    color: white;
+    text-decoration: none;
+}
+.model_foo {
+    border-top: 1px solid #dee2e6;
+}
+.modal_content{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+    background-clip: padding-box;
+    outline: 0;
+    width: 100%;
+}
+.login_model .modal-dialog {
+    max-width: 600px;
+    border-radius: 6px;
+}
+@media (max-width: 980px){
+    .hidenav {
+        display: none;
+    }
+}
