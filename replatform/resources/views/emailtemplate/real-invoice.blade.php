@@ -22,6 +22,6 @@
 
 
 <P style="margin:0 0 16px;font-weight: bold;">We appreciate the opportunity to work with you.</P>
-<P style="margin:0 0 16px;font-weight: bold;">Thank you!</P>
+<p style="margin:0 0 16pxfont-weight: bold;">Thanks for using <a href="http://staging.acclaimedhw.com/homeowner-plans" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://staging.acclaimedhw.com/homeowner-plans&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">staging.acclaimedhw.com</a>!</p>
 <P style="margin:0 0 16px;font-weight: bold;">Acclaimed Home Warranty</P>
 </body>

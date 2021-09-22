@@ -101,7 +101,7 @@ class HomeOwnerController extends Controller
 			'city' => 'required',
 			'state' => 'required',
 			'pincode' => 'required',
-			'phone' => 'required|numeric',
+			'phone' => 'required|regex:^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$^',
 			'email' => 'required|email',
 			'prop_street1' => 'required',
 			'prop_city' => 'required',
@@ -347,7 +347,8 @@ class HomeOwnerController extends Controller
 						'discount' => $orderinfo['discount'],
 					), function($message) use ($payer_email,$receiver_emails){
 						$message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
-						$message->to($payer_email)->subject('Your Acclaimed Home Warranty order has been received!');
+						$message->to($payer_email)->cc($receiver_emails)
+						->subject('Your Acclaimed Home Warranty order has been received!');
 					}); 
 					
 					HomeownerOrders::where( 'id', $requestdata->order_id )->update(array('status' => 'completed'));

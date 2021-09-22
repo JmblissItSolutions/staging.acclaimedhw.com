@@ -49,7 +49,7 @@
         </tr>
         <tr>
           <td>
-            <a href="https://acclaimedhw.com/" target="_blank" style=" color: #000; text-decoration: none;">www.acclaimedhw.com</a>
+            <a href="https://staging.acclaimedhw.com/" target="_blank" style=" color: #000; text-decoration: none;">www.staging.acclaimedhw.com</a>
           </td>
         </tr>
       </tfoot>

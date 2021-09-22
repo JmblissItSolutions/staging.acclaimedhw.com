@@ -3,6 +3,6 @@
   <h2>Daily HomeOwner Order Report</h2>
   <h3>{{date('Y-m-d')}}</h3>
 
-  <p style="margin:0 0 16px">Thanks for using <a href="http://replatform.acclaimedhw.com/homeowner-plans" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://replatform.acclaimedhw.com/homeowner-plans&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">replatform.acclaimedhw.com</a>!</p>
+  <p style="margin:0 0 16px">Thanks for using <a href="http://staging.acclaimedhw.com/homeowner-plans" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://staging.acclaimedhw.com/homeowner-plans&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">staging.acclaimedhw.com</a>!</p>
 
 </body>

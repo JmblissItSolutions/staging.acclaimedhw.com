@@ -8,7 +8,7 @@
 <p style="margin:0 0 16px">Your Member Advantages Enquiry For Utah details are as follows.</p>
 
 
-<table style="bprder:1px solid #000">
+<table style="border:1px solid #000">
     <tr><th>Location Name : </th><td>{{$location_name_1}}</td></tr>
     <tr><th>Name : </th><td>{{$first_name_1.' '.$last_name_1}}</td></tr>
     <tr><th>State : </th><td>{{$state_1}}</td></tr>
@@ -17,7 +17,7 @@
     <tr><th>Information Message : </th><td>{{$information_1}}</td></tr>
     
 </table>
-<p style="margin:0 0 16px">Thank you for submitting your enquiry. You will be contacted the next business day. If this is an emergency one of our team members will be in touch shortly. <a href="http://replatform.acclaimedhw.com/member-advantages" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://replatform.acclaimedhw.com/member-advantages&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">replatform.acclaimedhw.com</a>!</p>
+<p style="margin:0 0 16px">Thanks for contacting us! We will be in touch with you shortly. <a href="http://staging.acclaimedhw.com/member-advantages" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://staging.acclaimedhw.com/member-advantages&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">staging.acclaimedhw.com</a>!</p>
 <p style="margin:0 0 16px">Acclaimed Home Warranty</p>
 
 </body>

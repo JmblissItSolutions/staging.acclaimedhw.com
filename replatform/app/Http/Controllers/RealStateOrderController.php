@@ -357,10 +357,9 @@ class RealStateOrderController extends Controller
             }
             //print_r($receiver_emails);
             //die;
-            
+            $admin_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
             foreach($receiver_emails as $e){
                 $receiver_emails=$e;
-           $admin_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
                 // Send mail to User
                 $pdf_stream=$this->create_invoice_pdf($order_id);
                 $inv_no = str_pad($order_id, 8, "0", STR_PAD_LEFT);
@@ -373,14 +372,37 @@ class RealStateOrderController extends Controller
                     'prop_state'=> $orderinfo['prop_state'],
                     'prop_zipcode'=> $orderinfo['prop_zipcode']
                     
-                 ), function($message) use ($admin_emails,$receiver_emails,$order_id,$pdf_stream,$inv_no){
+                 ), function($message) use ($receiver_emails,$order_id,$pdf_stream,$inv_no){
                     
                     $message->attachData($pdf_stream,'AHW'.$inv_no.'.pdf');
                    
                     $message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
-                    $message->to($receiver_emails)->subject('Your Real Estate Warranty order has been received!');
+                    $message->to($receiver_emails)
+                    ->subject('Your Real Estate Warranty order has been received!');
                 }); 
             }
+            // for send admin mail
+              $pdf_stream=$this->create_invoice_pdf($order_id);
+                $inv_no = str_pad($order_id, 8, "0", STR_PAD_LEFT);
+                $mail_status=Mail::send('emailtemplate/real-invoice', array(
+                    'order_id' => $order_id,
+                    'prop_street1' => $orderinfo['prop_street1'],
+                    'prop_street2' => $orderinfo['prop_street2'],
+                    'prop_city' => $orderinfo['prop_city'],
+                    'unit'=> $orderinfo['unit'],
+                    'prop_state'=> $orderinfo['prop_state'],
+                    'prop_zipcode'=> $orderinfo['prop_zipcode']
+                    
+                 ), function($message) use ($admin_emails,$order_id,$pdf_stream,$inv_no){
+                    
+                    $message->attachData($pdf_stream,'AHW'.$inv_no.'.pdf');
+                   
+                    $message->from('web@acclaimedhw.com','Acclaimed Home Warranty');
+                    $message->to($admin_emails)
+                    ->subject('Your Real Estate Warranty order has been received!');
+                });
+                // End Admin Email
+
             return 1;
         }
         else{

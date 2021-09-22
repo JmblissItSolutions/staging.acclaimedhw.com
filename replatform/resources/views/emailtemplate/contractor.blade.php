@@ -7,7 +7,7 @@
 
 <p style="margin:0 0 16px">Your contractors details are as follows.</p>
 
-<table style="bprder:1px solid #000">
+<table style="border:1px solid #000">
     <tr><th>Company Name : </th><td>{{$company_name}}</td></tr>
     <tr><th>Contact Name : </th><td>{{$contact_name}}</td></tr>
     <tr><th>Contact Number : </th><td>{{$contact_number}}</td></tr>
@@ -18,7 +18,7 @@
     <tr><th>Hourly Rate: </th><td>{{$hourly_rate}}</td></tr>
     
 </table>
-<p style="margin:0 0 16px">Thank you for your request to become a contractor. We will be in touch with you shortly <a href="http://replatform.acclaimedhw.com/contractors" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://replatform.acclaimedhw.com/contractors&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">replatform.acclaimedhw.com</a>!</p>
+<p style="margin:0 0 16px">Thank you for your request to become a contractor. We will be in touch with you shortly <a href="http://staging.acclaimedhw.com/contractors" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://staging.acclaimedhw.com/contractors&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">staging.acclaimedhw.com</a>!</p>
 <p style="margin:0 0 16px">Acclaimed Home Warranty</p>
 
 </body>
