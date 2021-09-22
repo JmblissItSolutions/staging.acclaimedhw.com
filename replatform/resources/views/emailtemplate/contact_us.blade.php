@@ -8,13 +8,13 @@
 <p style="margin:0 0 16px">Your contact us details are as follows.</p>
 
 
-<table style="border:1px solid #000">
-    <tr><th>Name : </th><td>{{$contact_name}}</td></tr>
-    <tr><th>Phone : </th><td>{{$contact_phone}}</td></tr>
-    <tr><th>Email : </th><td>{{$contact_email}}</td></tr>
-    <tr><th>Message : </th><td>{{$contact_message}}</td></tr>
+<table>
+    <tr><th style="text-align:left">Name : </th><td>{{$contact_name}}</td></tr>
+    <tr><th style="text-align:left">Phone : </th><td>{{$contact_phone}}</td></tr>
+    <tr><th style="text-align:left">Email : </th><td>{{$contact_email}}</td></tr>
+    <tr><th style="text-align:left">Message : </th><td>{{$contact_message}}</td></tr>
     
-</table>
+</table><br>
 <p style="margin:0 0 16px">Thanks for contacting us! We will be in touch with you shortly. <a href="http://staging.acclaimedhw.com/contact-us" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://staging.acclaimedhw.com/contact-us&amp;source=gmail&amp;ust=1619515408370000&amp;usg=AFQjCNFr1uX-UhEJIlqdvycI9xKPR9CVVA">staging.acclaimedhw.com</a>!</p>
 <p style="margin:0 0 16px">Acclaimed Home Warranty</p>
 
