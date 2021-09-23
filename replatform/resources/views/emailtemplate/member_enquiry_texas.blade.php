@@ -8,7 +8,7 @@
 <p style="margin:0 0 16px">Your Member Advantages Enquiry For Texas details are as follows.</p>
 
 
-<table style="border:1px solid #000">
+<table>
     <tr><th style="text-align:left">Location Name : </th><td>{{$location_name_4}}</td></tr>
     <tr><th style="text-align:left">Name : </th><td>{{$first_name_4.' '.$last_name_4}}</td></tr>
     <tr><th style="text-align:left">State : </th><td>{{$state_4}}</td></tr>
