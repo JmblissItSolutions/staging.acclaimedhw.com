@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.c941ccfb.chunk.css",
-    "main.js": "/static/js/main.81411380.chunk.js",
-    "main.js.map": "/static/js/main.81411380.chunk.js.map",
+    "main.js": "/static/js/main.a6f21bd6.chunk.js",
+    "main.js.map": "/static/js/main.a6f21bd6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.fd8327a9.js",
     "runtime-main.js.map": "/static/js/runtime-main.fd8327a9.js.map",
     "static/css/2.000ac8dd.chunk.css": "/static/css/2.000ac8dd.chunk.css",
-    "static/js/2.5a89890a.chunk.js": "/static/js/2.5a89890a.chunk.js",
-    "static/js/2.5a89890a.chunk.js.map": "/static/js/2.5a89890a.chunk.js.map",
+    "static/js/2.38c44060.chunk.js": "/static/js/2.38c44060.chunk.js",
+    "static/js/2.38c44060.chunk.js.map": "/static/js/2.38c44060.chunk.js.map",
     "static/js/3.590fd715.chunk.js": "/static/js/3.590fd715.chunk.js",
     "static/js/3.590fd715.chunk.js.map": "/static/js/3.590fd715.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.000ac8dd.chunk.css.map": "/static/css/2.000ac8dd.chunk.css.map",
     "static/css/main.c941ccfb.chunk.css.map": "/static/css/main.c941ccfb.chunk.css.map",
-    "static/js/2.5a89890a.chunk.js.LICENSE.txt": "/static/js/2.5a89890a.chunk.js.LICENSE.txt",
+    "static/js/2.38c44060.chunk.js.LICENSE.txt": "/static/js/2.38c44060.chunk.js.LICENSE.txt",
     "static/media/Acclaimed-Home-Warranty-New-Logo-2021.1e118924.png": "/static/media/Acclaimed-Home-Warranty-New-Logo-2021.1e118924.png",
     "static/media/landing.css": "/static/media/MyriadPro-Bold.debb99de.otf",
     "static/media/Checkoutbg.ed32a2ab.png": "/static/media/Checkoutbg.ed32a2ab.png",
@@ -66,17 +66,13 @@
     "static/media/stayce-blake.af133a2d.png": "/static/media/stayce-blake.af133a2d.png",
     "static/media/theroad.ece1649d.jpg": "/static/media/theroad.ece1649d.jpg",
     "static/media/tim-parelli.2da72317.png": "/static/media/tim-parelli.2da72317.png",
-    "static/media/vid-1.208ebef1.jpg": "/static/media/vid-1.208ebef1.jpg",
-    "static/media/vid-2.3e525128.jpg": "/static/media/vid-2.3e525128.jpg",
-    "static/media/vid-3.13c8258a.jpg": "/static/media/vid-3.13c8258a.jpg",
-    "static/media/vid-4.05aba59a.jpg": "/static/media/vid-4.05aba59a.jpg",
     "static/media/walkcure.ca67abef.jpg": "/static/media/walkcure.ca67abef.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fd8327a9.js",
     "static/css/2.000ac8dd.chunk.css",
-    "static/js/2.5a89890a.chunk.js",
+    "static/js/2.38c44060.chunk.js",
     "static/css/main.c941ccfb.chunk.css",
-    "static/js/main.81411380.chunk.js"
+    "static/js/main.a6f21bd6.chunk.js"
   ]
 }
