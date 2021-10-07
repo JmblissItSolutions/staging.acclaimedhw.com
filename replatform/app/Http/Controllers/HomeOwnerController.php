@@ -319,7 +319,7 @@ class HomeOwnerController extends Controller
 						}
 					}
 					$orderinfo['productitems'] = $orderitems;
-					$receiver_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
+					$receiver_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com");
 					// Send mail to admin
 					\Mail::send('emailtemplate/homeowner-invoice', array(
 						'order_id' => $requestdata->order_id,

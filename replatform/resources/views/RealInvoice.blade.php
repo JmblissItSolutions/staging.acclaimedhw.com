@@ -49,7 +49,7 @@
         </tr>
         <tr>
           <td>
-            <a href="https://staging.acclaimedhw.com/" target="_blank" style=" color: #000; text-decoration: none;">www.staging.acclaimedhw.com</a>
+            <a href="https://acclaimedhw.com/" target="_blank" style=" color: #000; text-decoration: none;">www.acclaimedhw.com</a>
           </td>
         </tr>
       </tfoot>
@@ -88,125 +88,47 @@
 
      </td>
   </tr>
+</table>
+<table style="margin: 20px auto; width: 90%; border: none; border-collapse: collapse; table-layout: fixed;">
   <tr>
-    <td style="text-align: right;">
+    <td style="font-weight:bold;">Property Address:</td>
+    <td style="padding-right: 30px;">{{ trim($prop_street1.' '.$prop_street2) }}<br/>
+    {{ $prop_city }} {{ $prop_state }} {{ $prop_zipcode }}</td>
+    <td>
          @if($closing_date!='')
            Estimated Close Date / Settlement Date: {{ date('Y/m/d',strtotime($closing_date)) }}
          @endif
     </td>
   </tr>
-</table>
-<table style="margin: 20px auto; width: 90%; border: 1px solid #ccc; border-collapse: collapse; table-layout: fixed;">
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Location</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $location_name }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Invoice ID</td>
-  <td style="padding: 5px; border: 1px solid #ccc;"> {{ $order_id }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Coverage Type</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $co_type_name }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">I am the</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $i_am_the }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Home Type</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $question_name }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Property Address</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">
-    {{ trim($prop_street1.' '.$prop_street2) }}<br/>
-    {{ $prop_city }}<br/>
-    {{ $prop_state }}<br/>
-    {{ $prop_zipcode }}
-  </td>
-</tr>
-<!-- Buyer -->
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc; vertical-align: top;" rowspan="10">Buyer</td>
-  <td style="padding: 5px; padding-bottom:0; border-top: 1px solid #ccc">{{ $buyer_name }}</td></tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $buyer_email }}</td>
-</tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $buyer_phone }}</td>
-</tr>
-<tr>
+  <tr>
   <td style="padding: 5px;"></td>
 </tr>
-<tr>
-  <td style="padding-left: 5px;">Agent:</td>
-</tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $buyer_agentname }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px;">{{ $buyer_agentemail }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px;">{{ $buyer_agentphone }}</td>
-</tr>
-<tr>
+  <tr>
+    <td style="font-weight:bold;">Buyer</td>
+    <td style="font-weight:bold;">Seller</td>
+    <td style="font-weight:bold;">Escrow</td>
+  </tr>
+  <tr>
+    <td>{{ $buyer_name }}<br/>{{ $buyer_email }}<br/>{{ $buyer_phone }}</td>
+    <td>{{ $seller_name }}<br/>{{ $seller_email }}<br/>{{ $seller_phone }}</td>
+    <td>{{ $escrow_title }}<br/>{{ trim($escrow_street1.' '.$escrow_street2) }}<br/>
+    {{ $escrow_city }} {{ $escrow_state }} {{ $escrow_zipcode }}</td>
+  </tr>
+  <tr>
   <td style="padding: 5px;"></td>
 </tr>
-<tr>
-  <td style="padding: 5px; border-bottom: 1px solid #ccc;"></td>
-</tr>
-<!-- /Buyer>
-<!-- seller -->
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc; vertical-align: top;" rowspan="10">Seller</td>
-  <td style="padding: 5px; padding-bottom:0; border-top: 1px solid #ccc">{{ $seller_name }}</td></tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $seller_email }}</td>
-</tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $seller_phone }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px;"></td>
-</tr>
-<tr>
-  <td style="padding-left: 5px;">Agent:</td>
-</tr>
-<tr>
-  <td style="padding-left: 5px;">{{ $seller_agentname }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px;">{{ $seller_agentemail }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px;">{{ $seller_agentphone }}</td>
-</tr>
-
-<tr>
-  <td style="padding: 5px;"></td>
-</tr>
-<tr>
-  <td style="padding: 5px; border-bottom: 1px solid #ccc;"></td>
-</tr>
+  <tr>
+    <td style="font-weight:bold;">Buyer Agent:</td>
+    <td style="font-weight:bold;">Seller Agent:</td>
+    <td style="font-weight:bold;">Closing Officer:</td>
+  </tr>
+  <tr>
+    <td>{{ $buyer_agentname }}<br/>{{ $buyer_agentemail }}<br/>{{ $buyer_agentphone }}</td>
+    <td>{{ $seller_agentname }}<br/>{{ $seller_agentemail }}<br/>{{ $seller_agentphone }}</td>
+    <td>{{ $closing_officername }}<br/>{{ $closing_officeremail }}<br/>{{ $closing_officerphone }}<br/>
+    Escrow Assistant:<br/>{{ $escrow_assistantname }}<br/>{{  $escrow_assistantemail }}</td>
+  </tr>
 <!-- /Seller> -->  
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Billed To</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $order_biller }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Additional Instructions/Notes</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $order_notes }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Sales Person</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $sales_person }}</td>
-</tr>
-<tr>
-  <td style="padding: 5px; border: 1px solid #ccc;">Coupon Code</td>
-  <td style="padding: 5px; border: 1px solid #ccc;">{{ $coupon_code }}</td>
-</tr>
 </table>
 <table style="margin: 20px auto; max-width: 900px; width: 90%; border-collapse: collapse; table-layout: fixed;">
 <tr>

@@ -237,6 +237,7 @@ class RealStateOrderController extends Controller
                 $realorders->product_name = $innrdata['product_name'];
                 $realorders->prod_type = $innrdata['prod_type'];
                 $realorders->quantity = $innrdata['quantity'];
+                
                 $realorders->rate = $innrdata['price'];
                 $realorders->line_total = $innrdata['price']*$innrdata['quantity'];
                 $saved = $realorders->save();
@@ -303,8 +304,8 @@ class RealStateOrderController extends Controller
         if($receivers!=""){
             $receivers=explode(',',$receivers);
             
-
-            $orderinfo =  RealStateOrders::leftJoin('real_applied_coupons', 'realstate_orders.id', '=', 'real_applied_coupons.order_id')->where('realstate_orders.id', $order_id)->select('realstate_orders.*' ,'real_applied_coupons.discount')->first();
+            $orderinfo =  RealStateOrders::leftJoin('real_applied_coupons', 'realstate_orders.id', '=', 'real_applied_coupons.order_id')->leftJoin('realstate_locations', 'realstate_orders.p_location_id', '=', 'realstate_locations.id')->leftJoin('realstate_coverage_types', 'realstate_orders.p_coverage_type_id', '=', 'realstate_coverage_types.id')->leftJoin('realstate_property_type', 'realstate_orders.p_property_type_id', '=', 'realstate_property_type.id')->where('realstate_orders.id', $order_id)->select('realstate_locations.location_name','realstate_coverage_types.co_type_name','realstate_property_type.question_name','realstate_orders.*' ,'real_applied_coupons.discount')->first();
+           // $orderinfo =  RealStateOrders::leftJoin('real_applied_coupons', 'realstate_orders.id', '=', 'real_applied_coupons.order_id')->leftJoin('realstate_locations', 'realstate_orders.p_location_id', '=', 'realstate_locations.id')->where('realstate_orders.id', $order_id)->select('realstate_orders.*' ,'real_applied_coupons.discount','realstate_locations.location_name')->first();
             $orderinfo['order_date'] = $orderinfo->created_at->format('F d,Y');
             $orderitems = RealStateOrders::leftJoin('real_order_items', 'realstate_orders.id', '=', 'real_order_items.order_id')
             ->where('realstate_orders.id', $order_id)
@@ -357,20 +358,63 @@ class RealStateOrderController extends Controller
             }
             //print_r($receiver_emails);
             //die;
-            $admin_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
+            //$admin_emails=array("Kristin@acclaimedhw.com","web@acclaimedhw.com","orders@acclaimedhw.com","Asenathhorton@gmail.com");
+            $admin_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com");
             foreach($receiver_emails as $e){
                 $receiver_emails=$e;
                 // Send mail to User
                 $pdf_stream=$this->create_invoice_pdf($order_id);
                 $inv_no = str_pad($order_id, 8, "0", STR_PAD_LEFT);
-                $mail_status=Mail::send('emailtemplate/real-invoice', array(
+                $mail_status=Mail::send('emailtemplate/real-invoice1', array(
                     'order_id' => $order_id,
+                    'order_date' => $orderinfo['order_date'],
                     'prop_street1' => $orderinfo['prop_street1'],
                     'prop_street2' => $orderinfo['prop_street2'],
                     'prop_city' => $orderinfo['prop_city'],
                     'unit'=> $orderinfo['unit'],
                     'prop_state'=> $orderinfo['prop_state'],
-                    'prop_zipcode'=> $orderinfo['prop_zipcode']
+                    'prop_zipcode'=> $orderinfo['prop_zipcode'],
+                    'order_notes' => $orderinfo['order_notes'],
+            
+            //New added
+            'i_am_the' => $orderinfo['i_am_the'],
+            
+            'buyer_name' => $orderinfo['buyer_name'],
+            'buyer_email' => $orderinfo['buyer_email'],
+            'buyer_phone' => $orderinfo['buyer_phone'],
+            'buyer_agentname' => $orderinfo['buyer_agentname'],
+            'buyer_agentphone' => $orderinfo['buyer_agentphone'],
+            'buyer_agentemail' => $orderinfo['buyer_agentemail'],
+
+            'seller_name' => $orderinfo['seller_name'],
+            'seller_email' => $orderinfo['seller_email'],
+            'seller_phone' => $orderinfo['seller_phone'],
+            'seller_agentname' => $orderinfo['seller_agentname'],
+            'seller_agentphone' => $orderinfo['seller_agentphone'],
+            'seller_agentemail' => $orderinfo['seller_agentemail'],
+
+            'escrow_title' => $orderinfo['escrow_title'],
+            'escrow_street1' => $orderinfo['escrow_street1'],
+            'escrow_street2' => $orderinfo['escrow_street2'],
+            'escrow_city' => $orderinfo['escrow_city'],
+            'escrow_state' => $orderinfo['escrow_state'],
+            'escrow_zipcode' => $orderinfo['escrow_zipcode'],
+            'closing_officername' => $orderinfo['closing_officername'],
+            'closing_officeremail' => $orderinfo['closing_officeremail'],
+            'closing_officerphone' => $orderinfo['closing_officerphone'],
+            'closing_date' => $orderinfo['closing_date'],
+            'escrow_assistantname' => $orderinfo['escrow_assistantname'],
+            'escrow_assistantemail' => $orderinfo['escrow_assistantemail'],
+
+            'order_biller' => $orderinfo['order_biller'],
+            'order_notes' => $orderinfo['order_notes'],
+            'sales_person' => $orderinfo['sales_person'],
+            'coupon_code' => $orderinfo['coupon_code'],
+            'closing_date' => $orderinfo['closing_date'],
+            'updated_at' => $orderinfo['updated_at'],
+            'location_name' => $orderinfo['location_name'],
+            'co_type_name' => $orderinfo['co_type_name'],
+            'question_name' => $orderinfo['question_name'],
                     
                  ), function($message) use ($receiver_emails,$order_id,$pdf_stream,$inv_no){
                     
@@ -386,12 +430,54 @@ class RealStateOrderController extends Controller
                 $inv_no = str_pad($order_id, 8, "0", STR_PAD_LEFT);
                 $mail_status=Mail::send('emailtemplate/real-invoice', array(
                     'order_id' => $order_id,
+                    'order_date' => $orderinfo['order_date'],
                     'prop_street1' => $orderinfo['prop_street1'],
                     'prop_street2' => $orderinfo['prop_street2'],
                     'prop_city' => $orderinfo['prop_city'],
                     'unit'=> $orderinfo['unit'],
                     'prop_state'=> $orderinfo['prop_state'],
-                    'prop_zipcode'=> $orderinfo['prop_zipcode']
+                    'prop_zipcode'=> $orderinfo['prop_zipcode'],
+                    'order_notes' => $orderinfo['order_notes'],
+            
+            //New added
+            'i_am_the' => $orderinfo['i_am_the'],
+            
+            'buyer_name' => $orderinfo['buyer_name'],
+            'buyer_email' => $orderinfo['buyer_email'],
+            'buyer_phone' => $orderinfo['buyer_phone'],
+            'buyer_agentname' => $orderinfo['buyer_agentname'],
+            'buyer_agentphone' => $orderinfo['buyer_agentphone'],
+            'buyer_agentemail' => $orderinfo['buyer_agentemail'],
+
+            'seller_name' => $orderinfo['seller_name'],
+            'seller_email' => $orderinfo['seller_email'],
+            'seller_phone' => $orderinfo['seller_phone'],
+            'seller_agentname' => $orderinfo['seller_agentname'],
+            'seller_agentphone' => $orderinfo['seller_agentphone'],
+            'seller_agentemail' => $orderinfo['seller_agentemail'],
+
+            'escrow_title' => $orderinfo['escrow_title'],
+            'escrow_street1' => $orderinfo['escrow_street1'],
+            'escrow_street2' => $orderinfo['escrow_street2'],
+            'escrow_city' => $orderinfo['escrow_city'],
+            'escrow_state' => $orderinfo['escrow_state'],
+            'escrow_zipcode' => $orderinfo['escrow_zipcode'],
+            'closing_officername' => $orderinfo['closing_officername'],
+            'closing_officeremail' => $orderinfo['closing_officeremail'],
+            'closing_officerphone' => $orderinfo['closing_officerphone'],
+            'closing_date' => $orderinfo['closing_date'],
+            'escrow_assistantname' => $orderinfo['escrow_assistantname'],
+            'escrow_assistantemail' => $orderinfo['escrow_assistantemail'],
+
+            'order_biller' => $orderinfo['order_biller'],
+            'order_notes' => $orderinfo['order_notes'],
+            'sales_person' => $orderinfo['sales_person'],
+            'coupon_code' => $orderinfo['coupon_code'],
+            'closing_date' => $orderinfo['closing_date'],
+            'updated_at' => $orderinfo['updated_at'],
+            'location_name' => $orderinfo['location_name'],
+            'co_type_name' => $orderinfo['co_type_name'],
+            'question_name' => $orderinfo['question_name']
                     
                  ), function($message) use ($admin_emails,$order_id,$pdf_stream,$inv_no){
                     
@@ -610,9 +696,6 @@ class RealStateOrderController extends Controller
         ->select('real_order_items.*' ,'real_order_items.id as itemid')->orderBy('real_order_items.id', 'DESC')
         ->get();
         //print_r($orderitems); die;
-          
-
-        
 
         $invoice_number = str_pad($order_id, 8, "0", STR_PAD_LEFT);
 
@@ -776,6 +859,19 @@ class RealStateOrderController extends Controller
             'seller_agentphone' => $orderinfo['seller_agentphone'],
             'seller_agentemail' => $orderinfo['seller_agentemail'],
 
+            'escrow_title' => $orderinfo['escrow_title'],
+            'escrow_street1' => $orderinfo['escrow_street1'],
+            'escrow_street2' => $orderinfo['escrow_street2'],
+            'escrow_city' => $orderinfo['escrow_city'],
+            'escrow_state' => $orderinfo['escrow_state'],
+            'escrow_zipcode' => $orderinfo['escrow_zipcode'],
+            'closing_officername' => $orderinfo['closing_officername'],
+            'closing_officeremail' => $orderinfo['closing_officeremail'],
+            'closing_officerphone' => $orderinfo['closing_officerphone'],
+            'closing_date' => $orderinfo['closing_date'],
+            'escrow_assistantname' => $orderinfo['escrow_assistantname'],
+            'escrow_assistantemail' => $orderinfo['escrow_assistantemail'],
+
             'order_biller' => $orderinfo['order_biller'],
             'order_notes' => $orderinfo['order_notes'],
             'sales_person' => $orderinfo['sales_person'],
@@ -786,9 +882,6 @@ class RealStateOrderController extends Controller
             'co_type_name' => $orderinfo['co_type_name'],
             'question_name' => $orderinfo['question_name'],
             'credit_balance' => $orderinfo['credit_balance'],
-            
-           
-
         );
         return $data;
     }
@@ -853,7 +946,7 @@ class RealStateOrderController extends Controller
                 
         $query = DB::getQueryLog();
         $lastQuery = end($query);
-        $receiver_emails=array("jmbliss13@gmail.com","vinod.k.jmbliss@gmail.com","Kristin@acclaimedhw.com","web@acclaimedhw.com");
+        $receiver_emails=array("Kristin@acclaimedhw.com","web@acclaimedhw.com","Asenathhorton@gmail.com");
         //$receiver_emails=implode(';',$receiver_emails);
         // Creating CSV file for Order Report
         $fileName = 'real_order_report_'.date('Y-m-d').'.csv';
