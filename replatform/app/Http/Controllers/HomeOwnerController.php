@@ -369,8 +369,8 @@ class HomeOwnerController extends Controller
 				"message" => $response->getMessage(),
 				], 422);
 			}
-		} catch(Exception $e) {
-			return $e->getMessage();
+		} catch(\Omnipay\Common\Exception\InvalidCreditCardException $ce) {
+			return $ce->getMessage();
 		}
 	}
 
